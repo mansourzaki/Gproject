@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<h3 class="my-4 text-center" style="color:#007BFF;">  صفحة المدرس</h3>
+<div class="container d-flex justify-content-center"  >
+<div class="card h-50 w-50 p-3 shadow-sm" style="background-color:white;  border-top:5px solid #007BFF;">
+    <div class="card-body">
+    <div class="card-title"></div>
+    <div class="row">
+    <div class="col-1"><i class="fas fa-male " style="color: #d4d3d3; font-size: 300%;"></i></div>
+    <div class="card-text col-11">هنا يمكنك إضافة مدرس جديد والتحكم فيما يتعلق به من خصائص مثل الفترة المفضلة ونوع العمل وغيره.  </div>
+    <!--Enter your email address and we'll send you a link to reset your password.-->
+    </div>
+    <form action="#" class="validation" novalidate>
+      <div class="form-group my-4">
+        <label for="title" class="mt-4 mb-2 fw-bold">رقم ID<span class="text-danger">*</span>:</label>
+        <input type="idNumber" class="form-control" id="idNumber" placeholder="رقم ID " name="credits" required>
+        <div class="valid-feedback">تم.</div>
+        <div class="invalid-feedback">رجاءً، إملىء هذا الحقل.</div>
+      </div>
+      
+        <div class="form-group my-4">
+            <label for="title" class="mt-4 mb-2 fw-bold">اسم المدرس<span class="text-danger">*</span>:</label>
+            <input type="text" class="form-control" id="lecturerName" placeholder=" اسم المدرس" name="lecturerName" required>
+            <div class="valid-feedback">تم.</div>
+            <div class="invalid-feedback">رجاءً، إملىء هذا الحقل.</div>
+          </div>
+        
+          <div class="form-group my-4">
+            <label for="title" class="mt-4 mb-2 fw-bold">الدرجة الأكاديمية<span class="text-danger">*</span>:</label>
+            <select id="lecturerType" name="lecturerType" class="form-control" required>
+              <option selected>غير محدد</option>
+              <option>أستاذ</option>
+              <option>أستاذ مشارك</option>
+              <option>أستاذ مساعد</option>
+              <option>مُحاضر</option>
+              <option>مُدرس</option>
+              <option>مُعيد</option>
+            </select>
+            <div class="valid-feedback">تم.</div>
+            <div class="invalid-feedback">رجاءً، إملىء هذا الحقل.</div>
+          </div>
+          <!-- مؤجلة
+          <div class="form-group my-4">
+            <label for="title" class="mt-4 mb-2 fw-bold">الفترة المفضلة لدى المدرس<span class="text-danger">*</span>:</label>
+            <select id="preferedTime" name="preferedTime" class="form-control" required>
+              <option selected>غير محدد</option>
+              <option>مسائي</option>
+              <option>صباحي</option>
+            </select>
+            <div class="valid-feedback">تم.</div>
+            <div class="invalid-feedback">رجاءً، إملىء هذا الحقل.</div>
+          </div>
+        -->
+          <div class="form-group my-4">
+            <label for="title" class="mt-4 mb-2 fw-bold">العبء الأقصى (عدد الساعات)<span class="text-danger">*</span>:</label>
+            <input type="number" class="form-control" id="maxCredits" placeholder="العبء الأقصى " name="maxCredits" required>
+            <div class="valid-feedback">تم.</div>
+            <div class="invalid-feedback">رجاءً، إملىء هذا الحقل.</div>
+          </div>
+          <div class="form-group my-4">
+            <label for="title" class="mt-4 mb-2 fw-bold">نوع العمل<span class="text-danger">*</span>:</label>
+            <select id="preferedTime" name="preferedTime" class="form-control" required>
+              <option selected>غير محدد</option>
+              <option>ساعات</option>
+              <option>مثبت</option>
+            </select>
+            <div class="valid-feedback">تم.</div>
+            <div class="invalid-feedback">رجاءً، إملىء هذا الحقل.</div>
+          </div>
+          <div class="form-group my-4">
+            <label for="title" class="mt-4 mb-2 fw-bold">المنصب<span class="text-danger">*</span>:</label>
+            <select id="position" name="position" class="form-control" onChange="changStatus()" required>
+              <option selected>غير محدد</option>
+              <option value="administrative">إداري</option>
+              <option value="notAdministrative">بدون</option>
+            </select>
+            <div class="valid-feedback">تم.</div>
+            <div class="invalid-feedback">رجاءً، إملىء هذا الحقل.</div>
+          </div>
+
+          <div class="form-group my-4">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="dean" id="dean">
+              <label class="form-check-label" for="dean">
+                عميد
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="viceDean" id="viceDean" >
+              <label class="form-check-label" for="viceDean">
+                نائب عميد
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="headOfDepartment" id="headOfDepartment" >
+              <label class="form-check-label" for="headOfDepartment">
+                رئيس قسم
+              </label>
+            </div>
+
+          </div>
+          
+          
+          <div class= "d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary my-4 w-100">إرسال</button>
+        </div>
+    </form>
+    
+    
+</div>
+</div>
+</div>
+{% endblock %}
+
+
+<script>
+    document.getElementById("dean").disabled = true;
+    document.getElementById("viceDean").disabled = true;
+    document.getElementById("headOfDepartment").disabled = true; 
+    
+  // Disable form submissions if there are invalid fields
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Get the forms we want to add validation styles to
+      var forms = document.getElementsByClassName('validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+  
+
+ function changStatus(){
+  var select = document.getElementById("position"); 
+  var value = select.options[select.selectedIndex].value;
+  console.log(value);
+  if(value == "administrative"){
+    document.getElementById("dean").disabled = false;
+    document.getElementById("viceDean").disabled = false;
+    document.getElementById("headOfDepartment").disabled = false;
+  }else{
+    document.getElementById("dean").disabled = true;
+    document.getElementById("viceDean").disabled = true;
+    document.getElementById("headOfDepartment").disabled = true;  
+    document.getElementById("dean").checked = false;
+    document.getElementById("viceDean").checked = false;
+    document.getElementById("headOfDepartment").checked = false;   
+  }
+ }
+  </script>

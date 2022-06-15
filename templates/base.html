@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <title>القاعة</title>
+
+  <!-- Adding Unicode support. -->
+  <meta charset="utf-8">
+
+  <!-- The following line is used for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <!--  Bootstrap CSS\RTL -->
+ <link rel="stylesheet" href="assests/bootstrap-5.0.2-dist/css/bootstrap.rtl.min.css">
+  
+
+  <!-- JQuery (For Bootstrap)  -->
+  <script src="assests/jquery-3.6.0.min.js"></script>
+
+  <script src="assests/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+  
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+   integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+   <!--CSS file-->
+
+<style>
+     h3{
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+     }
+    .social>i{
+     font-size: 50px;
+      padding: 20px 5px 20px 5px;
+        color:#d4d3d3;
+}
+
+.social>i:hover{
+color: #007BFF;
+}
+.langChange{
+  color: #d4d3d3;
+  font-size: 25px;
+
+}
+.langChange:hover{
+  color: #007BFF;
+
+}
+</style>
+</head>
+<body style="background-color: #FAFAFA;">    
+
+
+
+{% block content %}
+
+
+{% endblock %}
+
+{% include 'parts/footer.html' %}
+{% comment %} </div> {% endcomment %}
+      <script>
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();   
+        });
+        </script>
+      
+            
+          </body>
+          </html>
