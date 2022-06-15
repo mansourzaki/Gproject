@@ -1,0 +1,140 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h3 class="my-4 text-center" style="color:#007BFF;">إدخال الدفعات الدراسية</h3>
+<div class="container d-flex justify-content-center"  >
+<div class="card h-50 w-50 p-3 shadow-sm" style="background-color:white;  border-top:5px solid #007BFF;">
+    <div class="card-body">
+    <div class="card-title"></div>
+    <div class="row">
+    <div class="col-1"><i class="fas fa-check-square  " style="color: #d4d3d3; font-size: 300%;"></i></div>
+    <div class="card-text col-11">هنا يمكنك تعيين المساقات لكل تخصص وسنة دراسية، التخصصات يتم جلبها من قاعدة البيانات. </div>
+    <!--Enter your email address and we'll send you a link to reset your password.-->
+    </div>
+    <form action="#" class="validation" novalidate>
+      <!-- محذوف
+          <div class="form-group my-4">
+            <label for="title" class="mt-4 mb-2 fw-bold">اسم المساق<span class="text-danger">*</span>:</label>
+            <select id="courseName" name="courseName" class="form-control" required>
+              <option selected>غير محدد</option>
+              <option>[اسم المساق]</option>
+              <option>[اسم المساق]</option>
+              <option>[اسم المساق]</option>
+              <option>[اسم المساق]</option>
+            </select>
+            <div class="valid-feedback">تم.</div>
+            <div class="invalid-feedback">رجاءً، إملىء هذا الحقل.</div>
+          </div>
+        -->
+
+
+        <div class="row">
+        <div class="form-group my-4 col-12 col-sm-6">
+            <label for="title" class="mt-4 mb-2 fw-bold">التخصصات<span class="text-danger">*</span>:</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="major" value="softwareDev" id="softwareDev">
+              <label class="form-check-label" for="softwareDev">
+                تطوير البرمجيات
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="major" value="mobileComputing" id="mobileComputing" >
+              <label class="form-check-label" for="mobileComputing">
+                حوسبة متنقلة
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="major" value="multimedia" id="multimedia" >
+              <label class="form-check-label" for="multimedia">
+                وسائط متعددة
+              </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="major" value="computerScience" id="computerScience" >
+                <label class="form-check-label" for="computerScience">
+                  علوم حاسوب
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="major" value="informationTechnology" id="informationTechnology" >
+                <label class="form-check-label" for="informationTechnology">
+                  نظم معلومات تكنولوجية
+                </label>
+              </div>
+          </div>
+          
+          <div class="form-group my-4  col-12 col-sm-6">
+            <label for="title" class="mt-4 mb-2 fw-bold">السنة الدراسية<span class="text-danger">*</span>:</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="year" value="firstYear" id="firstYear">
+              <label class="form-check-label" for="firstYear">
+                سنة أولى
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="year" value="secondYear" id="secondYear" >
+              <label class="form-check-label" for="secondYear">
+                سنة ثانية
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="year" value="thirdYear" id="thirdYear" >
+              <label class="form-check-label" for="thirdYear">
+                سنة ثالثة
+              </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="year" value="fourthYear" id="fourthYear" >
+                <label class="form-check-label" for="fourthYear">
+                    سنة رابعة
+                </label>
+              </div>
+          </div>
+        </div>  
+        <div class="row">
+          <div class="form-group my-4 col-12 col-sm-6">
+            <label for="title" class="mt-4 mb-2 fw-bold">عدد الطلاب<span class="text-danger">*</span>:</label>
+            <input type="number" class="form-control" id="numberOfMaleStudents" placeholder=" عدد الطلاب " name="numberOfMaleStudents" required>
+            <div class="valid-feedback">تم.</div>
+            <div class="invalid-feedback">رجاءً، إملىء هذا الحقل.</div>
+          </div>
+          <div class="form-group my-4 col-12 col-sm-6">
+            <label for="title" class="mt-4 mb-2 fw-bold">عدد الطالبات<span class="text-danger">*</span>:</label>
+            <input type="number" class="form-control" id="numberOfFemaleStudents" placeholder=" عدد الطالبات " name="numberOfFemaleStudents" required>
+            <div class="valid-feedback">تم.</div>
+            <div class="invalid-feedback">رجاءً، إملىء هذا الحقل.</div>
+          </div>
+        </div>
+          
+          <div class= "d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary my-4 w-100">إرسال</button>
+        </div>
+    </form>
+    
+    
+</div>
+</div>
+</div>
+{% endblock %}
+
+<script>
+    // Disable form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Get the forms we want to add validation styles to
+        var forms = document.getElementsByClassName('validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>

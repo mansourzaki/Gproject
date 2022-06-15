@@ -1,0 +1,294 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3 class="my-4 text-center" style="color:#007BFF;">  صفحة المساقات</h3>
+<div class="container d-flex justify-content-center"  >
+<div class="card h-50 w-50 p-3 shadow-sm" style="background-color:white;  border-top:5px solid #007BFF;">
+    <div class="card-body">
+    <div class="card-title"></div>
+    <div class="row">
+    <div class="col-1"><i class="fas fa-book " style="color: #d4d3d3; font-size: 300%;"></i></div>
+    <div class="card-text col-11">هنا يمكنك إضافة مساق جديد والتحكم فيما يتعلق به من خصائص مثل الرمز ومدرس المساق وعدد الطلاب وغيره.  </div>
+    <!--Enter your email address and we'll send you a link to reset your password.-->
+    </div>
+    <form action="#" class="validation" novalidate>
+      <div class="form-group my-4">
+        <label for="title" class="mt-4 mb-2 fw-bold">رمز المساق<span class="text-danger">*</span>:</label>
+        <input type="text" class="form-control" id="courseCode" placeholder="مثل SDEV 3213 " name="courseCode" required>
+        <div class="valid-feedback">تم.</div>
+        <div class="invalid-feedback">رجاءً، إملىء هذا الحقل.</div>
+      </div>
+      <div class="form-group my-4">
+        <label for="title" class="mt-4 mb-2 fw-bold">نوع المساق<span class="text-danger">*</span>:</label>
+        <select id="courseType" name="courseType" class="form-control" required>
+          <option selected>غير محدد</option>
+          <option>معمل</option>
+          <option>محاضرة عادية</option>
+        </select>
+        <div class="valid-feedback">تم.</div>
+        <div class="invalid-feedback">رجاءً، إملىء هذا الحقل.</div>
+      </div>
+        <div class="form-group my-4">
+            <label for="title" class="mt-4 mb-2 fw-bold">اسم المساق<span class="text-danger">*</span>:</label>
+            <input type="text" class="form-control" id="courseName" placeholder=" اسم المساق" name="courseName" required>
+            <div class="valid-feedback">تم.</div>
+            <div class="invalid-feedback">رجاءً، إملىء هذا الحقل.</div>
+          </div>
+          <div class="form-group my-4">
+            <label for="title" class="mt-4 mb-2 fw-bold">عدد الساعات<span class="text-danger">*</span>:</label>
+            <input type="number" class="form-control" id="credits" placeholder=" عدد الطلاب " name="credits" required>
+            <div class="valid-feedback">تم.</div>
+            <div class="invalid-feedback">رجاءً، إملىء هذا الحقل.</div>
+          </div>
+          <div class="form-group my-4">
+            <label for="title" class="mt-4 mb-2 fw-bold">الأقسام التي بإمكانها دراسة المساق<span class="text-danger">*</span>:</label>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="softwareDev" id="softwareDev">
+              <label class="form-check-label" for="softwareDev">
+                تطوير برمجيات
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="mobileComputing" id="mobileComputing" >
+              <label class="form-check-label" for="mobileComputing">
+                حوسبة متنقلة
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="multimedia" id="multimedia" >
+              <label class="form-check-label" for="multimedia">
+               وسائط متعددة
+              </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="computerScience" id="computerScience" >
+                <label class="form-check-label" for="computerScience">
+                  علوم حاسب
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="informationTechnology" id="informationTechnology" >
+                <label class="form-check-label" for="informationTechnology">
+                  نظم معلومات تكنولوجية
+                </label>
+              </div>
+          </div>
+          
+        
+      
+          <div class="form-group my-4">
+            <label for="title" class="mt-4 mb-2 fw-bold">السنة /الدفعة<span class="text-danger">*</span>:</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="year" value="firstYear" id="firstYear">
+              <label class="form-check-label" for="firstYear">
+                سنة أولى
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="year" value="secondYear" id="secondYear" >
+              <label class="form-check-label" for="secondYear">
+                سنة ثانية
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="year" value="thirdYear" id="thirdYear" >
+              <label class="form-check-label" for="thirdYear">
+                سنة ثالثة
+              </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="year" value="fourthYear" id="fourthYear" >
+                <label class="form-check-label" for="fourthYear">
+                    سنة رابعة
+                </label>
+              </div>
+          </div>
+          
+         
+          <div class="form-group my-4">
+            <label for="title" class="mt-4 mb-2 fw-bold">عدد الطلاب الكلي: 121</label>
+          </div>
+          
+          <div class= "d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary my-4 w-100">إرسال</button>
+        </div>
+    </form>
+    
+    
+</div>
+</div>
+</div>
+
+<h3 class=" text-center" style="color:#007BFF; margin-top: 100px; margin-bottom: 20px;"> مساق: مقدمة في الحوسبة</h3>
+<div class="container d-flex justify-content-center"  >
+<div class="card" style="background-color:white;  border-top:5px solid #007BFF;">
+    <div class="card-body">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">الشعبة</th>
+                <th scope="col">القسم</th>
+                <th scope="col"> اسم المدرس(إجباري)</th>
+                <th scope="col">الوقت</th>
+                <th scope="col">القاعة </th>
+                <th scope="col">الأيام</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">101</th>
+                <td>علوم</td>
+                <td>
+                  <div class="form-group">
+                  <select id="lecturerName" name="lecturerName" class="form-control" required>
+                    <option selected>[اسم المدرس]</option>
+                    <option>[اسم المدرس]</option>
+                    <option>[اسم المدرس] </option>
+                  </select>
+                  <div class="valid-feedback">تم.</div>
+                  <div class="invalid-feedback">رجاءً، إملىء هذا الحقل.</div>
+                </div>
+              </td>
+                <td><input type="number" placeholder="من" style="width: 50px;"> <input type="number" placeholder="إلى" style="width: 50px;"></td>
+                <td>
+                  <input type="text" name="room" id = "room" placeholder="رقم القاعة">
+                </td>
+                <td>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="firstDay" value="السبت">
+                        <label class="form-check-label" for="firstDay">السبت</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="secondDay" value="الأحد">
+                        <label class="form-check-label" for="secondDay">الأحد</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="thirdDay" value="الإثنين">
+                        <label class="form-check-label" for="thirdDay">الإثنين</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="fourthDay" value="الثلاثاء">
+                        <label class="form-check-label" for="fourthDay">الثلاثاء</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="fifthDay" value="الأربعاء">
+                        <label class="form-check-label" for="fifthDay">الأربعاء</label>
+                      </div>
+    
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">213</th>
+                <td>علوم + تطوير</td>
+                <td>
+                  <div class="form-group">
+                    <select id="lecturerName" name="lecturerName" class="form-control" required>
+                      <option selected>[اسم المدرس]</option>
+                      <option>[اسم المدرس]</option>
+                      <option>[اسم المدرس] </option>
+                    </select>
+                    <div class="valid-feedback">تم.</div>
+                    <div class="invalid-feedback">رجاءً، إملىء هذا الحقل.</div>
+                  </div>
+                </td>
+                <td><input type="number" placeholder="من" style="width: 50px;"> <input type="number" placeholder="إلى" style="width: 50px;"></td>
+                <td>
+                  <input type="text" name="room" id = "room" placeholder="رقم القاعة">
+                </td>
+                <td>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="firstDay" value="السبت">
+                        <label class="form-check-label" for="firstDay">السبت</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="secondDay" value="الأحد">
+                        <label class="form-check-label" for="secondDay">الأحد</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="thirdDay" value="الإثنين">
+                        <label class="form-check-label" for="thirdDay">الإثنين</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="fourthDay" value="الثلاثاء">
+                        <label class="form-check-label" for="fourthDay">الثلاثاء</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="fifthDay" value="الأربعاء">
+                        <label class="form-check-label" for="fifthDay">الأربعاء</label>
+                      </div>
+    
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">213</th>
+                <td>علوم + تطوير + حوسبة </td>
+
+                <td>
+                  <div class="form-group">
+                    <select id="lecturerName" name="lecturerName" class="form-control" required>
+                      <option selected>[اسم المدرس]</option>
+                      <option>[اسم المدرس]</option>
+                      <option>[اسم المدرس] </option>
+                    </select>
+                    <div class="valid-feedback">تم.</div>
+                    <div class="invalid-feedback">رجاءً، إملىء هذا الحقل.</div>
+                  </div>
+                </td>
+                <td><input type="number" placeholder="من" style="width: 50px;"> <input type="number" placeholder="إلى" style="width: 50px;"></td>
+                <td>
+                  <input type="text" name="room" id = "room" placeholder="رقم القاعة">
+                </td>
+                <td>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="firstDay" value="السبت">
+                        <label class="form-check-label" for="firstDay">السبت</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="secondDay" value="الأحد">
+                        <label class="form-check-label" for="secondDay">الأحد</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="thirdDay" value="الإثنين">
+                        <label class="form-check-label" for="thirdDay">الإثنين</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="fourthDay" value="الثلاثاء">
+                        <label class="form-check-label" for="fourthDay">الثلاثاء</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="fifthDay" value="الأربعاء">
+                        <label class="form-check-label" for="fifthDay">الأربعاء</label>
+                      </div>
+    
+                </td>
+              </tr>
+            </tbody>
+        </table>
+        <div class= "d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary my-4 ">تعيين</button>
+        </div>
+    </div>
+  </div>
+ 
+</div>
+{% endblock %}
+
+<script>
+    // Disable form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Get the forms we want to add validation styles to
+        var forms = document.getElementsByClassName('validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>

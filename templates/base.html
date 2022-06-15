@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -10,13 +11,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
  <!--  Bootstrap CSS\RTL -->
- <link rel="stylesheet" href="assests/bootstrap-5.0.2-dist/css/bootstrap.rtl.min.css">
+ <link rel="stylesheet" href="{% static 'assests/bootstrap-5.0.2-dist/css/bootstrap.rtl.min.css' %}">
   
 
   <!-- JQuery (For Bootstrap)  -->
-  <script src="assests/jquery-3.6.0.min.js"></script>
+  <script src="{% static 'assests/jquery-3.6.0.min.js' %}"></script>
 
-  <script src="assests/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+  <script src="{% static 'assests/bootstrap-5.0.2-dist/js/bootstrap.min.js' %}"></script>
   
   <!-- Font Awesome -->
 
@@ -59,13 +60,13 @@ color: #007BFF;
 {% endblock %}
 
 {% include 'parts/footer.html' %}
-{% comment %} </div> {% endcomment %}
-      <script>
-        $(document).ready(function(){
-          $('[data-toggle="tooltip"]').tooltip();   
-        });
-        </script>
+</div>
+<script>
+ $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+     });
+</script>
       
             
-          </body>
-          </html>
+</body>
+</html>
