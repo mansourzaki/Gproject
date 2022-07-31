@@ -40,7 +40,8 @@ def getInput_json2():
 @app.route('/generatefirstoutput',methods=['GET'])
 @cross_origin(origin='*')
 def generateFirstOutput_json():
-    subprocess.call(" python algo/groupingmodules.py ", shell=True)
+    subprocess.call(" python algo/groupingmodules2.py ", shell=True)
+    # subprocess.call(" python algo/groupingmodules.py ", shell=True)
     return 'done'
 
 #run the initialsolution that produce the final output
@@ -48,7 +49,8 @@ def generateFirstOutput_json():
 @cross_origin(origin='*')
 def generateFinalOutputjson():
     print('hii')
-    subprocess.call(" python algo/first_solution.py ", shell=True)
+    subprocess.call(" python algo/first_solution2.py ", shell=True)
+    # subprocess.call(" python algo/first_solution.py ", shell=True)
     return 'done'
 
 #uploads input2 file to algorithim
